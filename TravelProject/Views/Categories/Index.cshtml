@@ -1,0 +1,764 @@
+﻿@model CategoryListViewModel
+@{
+      ViewData["Title"] = Model.Category.Name;
+}
+
+<!-- breadcrumb start -->
+<section class="breadcrumb-section parallax-img pt-0">
+    <img src="~/images/inner-pages/breadcrumb1.jpg" class="bg-img img-fluid blur-up lazyload" alt="">
+    <div class="breadcrumb-content overlay-black">
+        <div>
+            <h2>@Model.Category.Name</h2>
+            <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a asp-controller="home" asp-action="index">Home</a></li>                   
+                    <li><a href="#">@Model.Category.Department.Name</a></li>
+                    <li>@Model.Category.Name</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="bird-animation">
+        <div class="bird-container bird-container--one">
+            <div class="bird bird--one"></div>
+        </div>
+        <div class="bird-container bird-container--two">
+            <div class="bird bird--two"></div>
+        </div>
+        <div class="bird-container bird-container--three">
+            <div class="bird bird--three"></div>
+        </div>
+        <div class="bird-container bird-container--four">
+            <div class="bird bird--four"></div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb end -->
+<!-- section start -->
+<section class="small-section bg-inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="filter-panel right-filter open-cls">
+                    <div class="left-filter">
+                        <div class="respon-filter-btn">
+                            <h6> filter <i class="fas fa-sort-down"></i></h6>
+                            <span class="according-menu"></span>
+                        </div>
+                        <div class="filters respon-filter-content filter-button-group">
+                            <ul>
+                                <li class="active" data-filter="*">All</li>
+                                <li data-filter=".popular">popular</li>
+                                <li data-filter=".latest">latest</li>
+                                <li data-filter=".trend">trend</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-panel">
+                        <a href="javascript:void(0)" class="view-map"><i class="fas fa-search"></i> find tours</a>
+                        <div class="collection-grid-view">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)" class="product-2-layout-view">
+                                        <ul class="filter-select">
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="product-3-layout-view">
+                                        <ul class="filter-select">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="product-4-layout-view">
+                                        <ul class="filter-select">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 onclick-map">
+                <div class="book-table single-table bg-inner">
+                    <div class="table-form classic-form">
+                        <form>
+                            <div class="row w-100">
+                                <div class="form-group col p-0">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                           placeholder="Starting from">
+                                    <img src="~/images/icon/table-no.png" class="img-fluid blur-up lazyload"
+                                         alt="">
+                                </div>
+                                <div class="form-group col p-0">
+                                    <input type="text" class="form-control" placeholder="Going to">
+                                    <img src="~/images/icon/table-no.png" class="img-fluid blur-up lazyload"
+                                         alt="">
+                                </div>
+                                <div class="col p-0">
+                                    <input placeholder="During Date" id="datepicker" />
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-rounded color1">search</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 ratio3_2">
+                <div class="product-wrapper-grid special-section grid-box">
+                    <div class="row content grid">
+                        <div class="col-xl-4 col-sm-6 popular grid-item wow fadeInUp" data-class="popular">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/7.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>beautiful Bali<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6>
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N) → Lombok (2N) →
+                                            Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="label-offer">Recommended</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 latest grid-item wow fadeInUp" data-class="latest">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/8.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>best of europe<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6>
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N) → Lombok (2N) →
+                                            Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 popular grid-item wow fadeInUp" data-class="popular">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/9.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>dubai adventure<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6>
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N) → Lombok (2N) →
+                                            Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 latest grid-item wow fadeInUp" data-class="latest">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/14.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>Egyptian Wonders with Cruise<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6 class="nowrap-cls">
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N)
+                                            → Lombok (2N) → Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 trend grid-item wow fadeInUp" data-class="trend">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/15.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>Spectacular South Africa<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6 class="nowrap-cls">
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N)
+                                            → Lombok (2N) → Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 trend grid-item wow fadeInUp" data-class="trend">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/10.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>exploring sydney<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6>
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N) → Lombok (2N) →
+                                            Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 popular grid-item wow fadeInUp" data-class="popular">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/11.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>splendid spain<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6>
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N) → Lombok (2N) →
+                                            Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="label-offer">certified</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 latest grid-item wow fadeInUp" data-class="latest">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/12.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>simply mauritius<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6>
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N) → Lombok (2N) →
+                                            Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6 popular grid-item wow fadeInUp" data-class="popular">
+                            <div class="special-box p-0">
+                                <div class="special-img">
+                                    <a href="tour-single-6.html">
+                                        <img src="~/images/tour/tour/13.jpg"
+                                             class="img-fluid blur-up lazyload bg-img" alt="">
+                                    </a>
+                                    <div class="top-icon">
+                                        <a href="#" class="" data-toggle="tooltip" data-placement="top" title=""
+                                           data-original-title="Add to Wishlist">
+                                            <i class="far fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="special-content">
+                                    <a href="tour-single-6.html">
+                                        <h5>canadian delight<span>(6N 7D)</span></h5>
+                                    </a>
+                                    <div class="tour-detail">
+
+                                        <h6 class="nowrap-cls">
+                                            <i class="fas fa-plane-departure mr-3"></i> Kuta (2N)
+                                            → Lombok (2N) → Ubud (2N) <i class="fas fa-plane-arrival ml-3"></i>
+                                        </h6>
+                                        <div class="include-sec">
+                                            <span>include at this price</span>
+                                            <ul class="include">
+                                                <li>
+                                                    <img src="~/images/icon/tour/hotel.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Hotel">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/airplane.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Flight">
+                                                </li>
+                                                <li>
+                                                    <img src="~/images/icon/tour/fork.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Meals">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/photo-camera.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top"
+                                                         title="Sightseeing">
+                                                </li>
+                                                <li class="not-include">
+                                                    <img src="~/images/icon/tour/visa.png"
+                                                         class="img-fluid blur-up lazyload" alt=""
+                                                         data-toggle="tooltip" data-placement="top" title="Visa">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom-section">
+                                            <div class="price">
+                                                <h6><del>$1300</del>$1245</h6>
+                                                <span>price per person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="label-offer">certified</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example" class="pagination-section mt-0">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section End -->
+@section Scripts {
+    <script src="~/js/filter.js"></script>
+    <script src="~/js/isotope.min.js"></script>
+     price range js 
+    <script src="~/js/price-range.js"></script>
+
+     wow js
+    <script src="~/js/wow.min.js"></script>
+
+     date-time picker js 
+    <script src="~/js/date-picker.js"></script>
+
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: 'dd mmmm'
+        });
+        $('#datepicker1').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: 'dd mmmm'
+        });
+        new WOW().init();
+    </script>
+
+}
+
+@section Head {
+     
+    <link rel="stylesheet" type="text/css" href="~/css/price-range.css">
+}

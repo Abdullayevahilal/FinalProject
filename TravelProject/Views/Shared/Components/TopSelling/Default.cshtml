@@ -1,0 +1,121 @@
+﻿@model IEnumerable<ProductViewModel>
+<!-- tours section start -->
+<section class="category-sec ratio3_2 section-b-space">
+    <div class="container @(Model.Count()==0?"d-none":"")">
+        <div class="title-1 title-5">
+            <span class="title-label">new offer</span>
+            <h2>most popular tours</h2>
+            <p>Trips, experiences, and places. All in one service.</p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="slide-3 arrow-classic">
+                    @foreach (var item in Model)
+                    {
+                        <a href="#">
+                            <partial name="Product/_SingleProductPartial" model="item" />
+                        </a>
+                    }
+
+                    @*<a href="#">
+            <div class="category-box">
+                <div class="img-category">
+                    <div class="side-effect"></div>
+                    <div>
+                        <img src="~/images/tour/tour/2.jpg" alt=""
+                             class="img-fluid blur-up lazyload bg-img">
+                    </div>
+                    <div class="top-bar">
+                        <span class="offer">offer</span>
+                        <h5><del>$320</del> $210</h5>
+                    </div>
+                    <div class="like-cls">
+                        <i class="fas fa-heart"><span class="effect"></span></i>
+                    </div>
+                </div>
+                <div class="content-category">
+                    <div class="top">
+                        <h3>hot air balloon</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur est.</p>
+                    <h6>5 days | 6 nights <span> 2 person</span></h6>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="category-box">
+                <div class="img-category">
+                    <div class="side-effect"></div>
+                    <div>
+                        <img src="~/images/tour/tour/3.jpg" alt=""
+                             class="img-fluid blur-up lazyload bg-img">
+                    </div>
+                    <div class="top-bar">
+                        <span class="offer">offer</span>
+                        <h5><del>$320</del> $210</h5>
+                    </div>
+                    <div class="like-cls">
+                        <i class="fas fa-heart"><span class="effect"></span></i>
+                    </div>
+                </div>
+                <div class="content-category">
+                    <div class="top">
+                        <h3>Cool water ride</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur est.</p>
+                    <h6>5 days | 6 nights <span> 2 person</span></h6>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="category-box">
+                <div class="img-category">
+                    <div class="side-effect"></div>
+                    <div>
+                        <img src="~/images/tour/tour/2.jpg" alt=""
+                             class="img-fluid blur-up lazyload bg-img">
+                    </div>
+                    <div class="top-bar">
+                        <span class="offer">offer</span>
+                        <h5><del>$320</del> $210</h5>
+                    </div>
+                    <div class="like-cls">
+                        <i class="fas fa-heart"><span class="effect"></span></i>
+                    </div>
+                </div>
+                <div class="content-category">
+                    <div class="top">
+                        <h3>Water fall</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur est.</p>
+                    <h6>5 days | 6 nights <span> 2 person</span></h6>
+                </div>
+            </div>
+        </a>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- tours section end -->

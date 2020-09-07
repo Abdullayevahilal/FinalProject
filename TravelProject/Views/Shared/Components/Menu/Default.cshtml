@@ -1,0 +1,95 @@
+﻿@model IEnumerable<DepartmentViewModel>
+
+
+<div class="main-navbar">
+    <div id="mainnav">
+        <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+        <div class="menu-overlay"></div>
+        <ul class="nav-menu">
+            <li class="back-btn">
+                <div class="mobile-back text-right">
+                    <span>Back </span>
+                    <i aria-hidden="true" class="fa fa-angle-right pl-2"></i>
+                </div>
+            </li>
+            <ul class="nav-menu">
+
+                <li><a asp-controller="pages" asp-action="aboutus">About us</a>
+
+                <li>
+                    <a asp-controller="pages" asp-action="aboutus">About us</a>
+
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link menu-title">
+                        Blog
+                    </a>
+
+                    
+                        <ul class="nav-submenu menu-content">
+                            <li class="nav-sub-childmenu level1"><a asp-controller="blog" asp-action="blogdetail">Blog detail</a>
+                            </li>
+                            
+                        </ul>
+                   
+
+
+                    <ul class="nav-submenu menu-content">
+                        <li class="nav-sub-childmenu level1">
+                            <a asp-controller="blog" asp-action="blogdetail">Blog detail</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+                <li>
+                    <a asp-controller="pages" asp-action="contactus">Contact us </a>
+                </li>
+                <li>
+                    <a asp-controller="pages" asp-action="comingsoon">
+                        Coming soon
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="nav-link menu-title">
+                        <i class="fas fa-user" style="font-size:22px" ></i>
+                    </a>
+
+                    <ul class="nav-submenu menu-content">
+                        <li class="nav-sub-childmenu level1">
+                            <a asp-controller="account" asp-action="register">Sign up</a>
+                        </li>
+                        <li class="nav-sub-childmenu level1">
+                            <a asp-controller="account" asp-action="login">Login</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+            <li class="dropdown">
+                <a href="#" class="nav-link menu-title">Categories</a>
+                <ul class="nav-submenu menu-content">
+                    @foreach (var department in Model)
+                    {
+                        <li>
+                            <a href="#" class="menu-title">@department.Name</a>
+                            <ul class="nav-sub-childmenu level1">
+                                @foreach (var category in department.Categories)
+                                {
+                                    <li><a asp-controller="categories" asp-action="index" asp-route-id="@category.Id">@category.Name</a></li>
+                                }
+                            </ul>
+                        </li>
+
+                    }
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+
+
+</div>

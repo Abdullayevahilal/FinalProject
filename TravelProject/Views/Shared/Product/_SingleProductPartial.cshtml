@@ -1,0 +1,49 @@
+﻿@model ProductViewModel
+<div class="category-box">
+    <div class="img-category">
+        <div class="side-effect"></div>
+        <div>
+            @*<a asp-controller="products" asp-action="index" asp-route-id="@Model.Id">*@
+                <img class="img-fluid blur-up lazyload bg-img" img src="~/images/@Model.Photos"  alt="@Model.Name">
+               @*</a>*@
+        </div>
+        <div class="top-bar">
+          
+            <span class="offer">offer</span>
+            @if (Model.Discount == null)
+            {
+
+                <h5>@Model.Price.ToString("#.00") ₼</h5>
+            }
+            else
+            {
+                var price = Model.Price - (Model.Price * Model.Discount.Percentage / 100);
+
+                <h5>
+                    <del>@Model.Price.ToString("#.00") ₼</del>
+                    @price.ToString("#.00") ₼
+                </h5>
+
+
+            }
+
+        </div>
+        <div class="like-cls">
+            <i class="fas fa-heart"><span class="effect"></span></i>
+        </div>
+    </div>
+    <div class="content-category">
+        <div class="top">
+            <h3>@Model.Name</h3>
+            <div class="rating">
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <i class="far fa-star @(Model.StarCount>=i?"fas":"")"></i>
+                }            
+            </div>
+        </div>
+        <p>@Model.Text</p>
+        <h6>7 days | 6 nights <span> 2 person</span></h6>
+    </div>
+
+</div>

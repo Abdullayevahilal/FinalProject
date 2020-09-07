@@ -1,0 +1,50 @@
+﻿<!-- add card modal start -->
+<div class="modal fade edit-profile-modal" id="add-card" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">add new card</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="a-month">card type</label>
+                        <select id="a-month" class="form-control">
+                            <option selected>add new card...</option>
+                            <option>credit card</option>
+                            <option>debit card</option>
+                            <option>debit card with ATM pin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="a-na">name on card</label>
+                        <input type="text" class="form-control" id="a-na">
+                    </div>
+                    <div class="form-group">
+                        <label for="a-n">card number</label>
+                        <input type="text" class="form-control" id="a-n">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="a-e">expiry date</label>
+                            <input type="text" class="form-control" id="a-e">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="a-c">cvv</label>
+                            <input type="password" maxlength="3" class="form-control" id="a-c">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-solid">add card</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- add card modal end -->

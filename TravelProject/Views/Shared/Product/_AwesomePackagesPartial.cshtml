@@ -1,0 +1,46 @@
+﻿@model ProductViewModel
+<div class="category-wrap">
+    <div class="category-img">
+        <a href="#">
+            <img src="~/images/tour/tour/4.jpg" alt=""
+                 class="img-fluid blur-up lazyload">
+        </a>
+        <div class="side-effect"></div>
+    </div>
+    <div class="category-content">
+        <div>
+            <div class="top">
+                <a href="#">
+                    <h3>@Model.Name</h3>
+                </a>
+                <h6>group</h6>
+            </div>
+            <div class="rating">
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <i class="far fa-star @(Model.StarCount>=i?"fas":"")"></i>
+                }
+            </div>
+            <p>@Model.Text
+            </p>
+            <div class="bottom">
+                   @if (Model.Discount == null)
+            {
+                <h5>@Model.Price.ToString("#.00") ₼</h5>
+            }
+            else
+            {
+                var price = Model.Price - (Model.Price * Model.Discount.Percentage / 100);
+
+                <h5>
+                    <del>@Model.Price.ToString("#.00") ₼</del>
+                    @price.ToString("#.00") ₼
+                </h5>
+
+
+            }
+                <h6 class="coupon-code">Coupon code: <span>EDR45</span></h6>
+            </div>
+        </div>
+    </div>
+</div>

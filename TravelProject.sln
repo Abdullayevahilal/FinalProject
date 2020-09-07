@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Travel", "TravelProject\Travel.csproj", "{B0A7F608-C489-4D32-B4F7-A9C1B9E468BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{BD29C036-BC0A-4BAD-B527-3947276B565C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin", "Admin\Admin.csproj", "{086E6DAA-C2CE-4230-B3D0-0DDFD67DA0EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0A7F608-C489-4D32-B4F7-A9C1B9E468BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A7F608-C489-4D32-B4F7-A9C1B9E468BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A7F608-C489-4D32-B4F7-A9C1B9E468BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A7F608-C489-4D32-B4F7-A9C1B9E468BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD29C036-BC0A-4BAD-B527-3947276B565C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD29C036-BC0A-4BAD-B527-3947276B565C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD29C036-BC0A-4BAD-B527-3947276B565C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD29C036-BC0A-4BAD-B527-3947276B565C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{086E6DAA-C2CE-4230-B3D0-0DDFD67DA0EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086E6DAA-C2CE-4230-B3D0-0DDFD67DA0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086E6DAA-C2CE-4230-B3D0-0DDFD67DA0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086E6DAA-C2CE-4230-B3D0-0DDFD67DA0EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD4AD713-1149-4598-B400-922699CE9DDA}
+	EndGlobalSection
+EndGlobal

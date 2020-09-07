@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProductViewModel>
+<!-- package section start-->
+<section class="category-wrapper section-b-space">
+    <div class="container @(Model.Count()==0?"d-none":"")">
+        <div class="title-1 title-5">
+            <span class="title-label">new offer</span>
+            <h2>awesome package</h2>
+            <p>Trips, experiences, and places. All in one service.</p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="slide-2 arrow-classic">
+                    @foreach (var item in Model)
+                    {
+                    <div>
+                        <partial name="Product/_AwesomePackagesPartial" model="item" />
+                    </div>
+                    }
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- package section end-->

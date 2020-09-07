@@ -1,0 +1,96 @@
+﻿@model AccountViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<!-- section start -->
+<section class="section-b-space animated-section dark-cls">
+    <img src="~/images/cab/grey-bg.jpg" alt="" class="img-fluid blur-up lazyload bg-img">
+    <div class="animation-section">
+        <div class="cross po-1"></div>
+        <div class="cross po-2"></div>
+        <div class="round po-4"></div>
+        <div class="round po-5"></div>
+        <div class="round r-y po-8"></div>
+        <div class="square po-10"></div>
+        <div class="square po-11"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6 offset-sm-2 col-sm-8 col-12">
+                <div class="account-sign-in">
+                    <div class="title">
+                        <h3>sign up</h3>
+                    </div>
+                    <div class="login-with">
+                        <h6>sign up with</h6>
+                        <div class="login-social row">
+                            <div class="col">
+                                <a class="boxes">
+                                    <img src="~/images/icon/social/facebook.png"
+                                         class="img-fluid blur-up lazyload" alt="">
+                                    <h6>facebook</h6>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="boxes">
+                                    <img src="~/images/icon/social/google.png"
+                                         class="img-fluid blur-up lazyload" alt="">
+                                    <h6>google</h6>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="divider">
+                            <h6>OR</h6>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input asp-for="Register.Name" class="form-control" placeholder="Name">
+                            <span asp-validation-for="Register.Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Surname</label>
+                            <input asp-for="Register.Surname" class="form-control" placeholder="Surname">
+                            <span asp-validation-for="Register.Surname"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input asp-for="Register.Email" class="form-control" placeholder="Enter email address">
+                            <span asp-validation-for="Register.Email"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input asp-for="Register.Password" class="form-control" placeholder="Password">
+                            <span asp-validation-for="Register.Password"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password confirm</label>
+                            <input asp-for="Register.PasswordConfirm" class="form-control" placeholder="Password">
+                            <span asp-validation-for="Register.PasswordConfirm"></span>
+                        </div>
+                        <div class="button-bottom">
+                            <button type="submit" class="w-100 btn btn-solid">create account</button>
+                            <div class="divider">
+                                <h6>or</h6>
+                            </div>
+                            <button type="submit" class="w-100 btn btn-solid btn-outline"
+                                    onclick="window.location.href = 'login.html';">
+                                login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section end -->
+
+@section Scripts{
+    <script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
