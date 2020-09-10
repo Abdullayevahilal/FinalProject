@@ -16,19 +16,34 @@ namespace Travel.Controllers
         private readonly ICategoryRepository _categoryRepository;
         private readonly IProductRepository _productRepository;
 
+
         public CategoriesController(IMapper mapper,
                                     ICategoryRepository categoryRepository,
-                                    IProductRepository productRepository)
+                                     IProductRepository productRepository)
+
         {
             _mapper = mapper;
             _categoryRepository = categoryRepository;
             _productRepository = productRepository;
+
         }
 
       
     }
-    //public IActionResult Index()
+
+    //public IActionResult Index(int id)
+    //{
+    //    var category = _categoryRepository.GetCategoryById(id);
+    //    if (category == null) return NotFound();
+
+    //    var model = new CategoryListViewModel
     //    {
-    //        return View();
-    //    }
-    }
+    //        Category = _mapper.Map<Category, CategoryViewModel>(category),
+
+    //    return View(model);
+    //}
+
+
+}
+
+

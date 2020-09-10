@@ -14,5 +14,6 @@ namespace Repository.Models
         [MaxLength(50)]
         public string Color { get; set; }
         public ICollection<Product> Products { get; set; }
+        public ICollection<Blog> Blogs { get; set; }
     }
 }

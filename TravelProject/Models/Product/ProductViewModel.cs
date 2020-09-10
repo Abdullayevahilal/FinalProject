@@ -10,7 +10,7 @@ namespace Travel.Models
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public IList<string> Photos { get; set; }
+        public List<string> Photos { get; set; }
         public int Id { get; set; }
         public LabelViewModel Label { get; set; }
         public DiscountViewModel Discount { get; set; }

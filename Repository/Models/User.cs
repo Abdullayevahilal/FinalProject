@@ -25,5 +25,6 @@ namespace Repository.Models
 
         public ICollection<Favorite> Favorites { get; set; }
         public ICollection<ProductReview> Reviews { get; set; }
+        public ICollection<BlogReview> BlogReviews { get; set; }
     }
 }

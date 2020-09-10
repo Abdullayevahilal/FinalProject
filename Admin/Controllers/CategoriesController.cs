@@ -15,7 +15,7 @@ namespace Admin.Controllers
     public class CategoriesController : Controller
     {
         private Repository.Models.Admin _admin => RouteData.Values["Admin"] as Repository.Models.Admin;
-        private readonly IDepartmentRepository _departmentRepository;
+        //private readonly IDepartmentRepository _departmentRepository;
         private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
         public CategoriesController(ICategoryRepository categoryRepository,

@@ -22,5 +22,12 @@ namespace Repository.Data
              public DbSet<Slider> Sliders  { get; set; }         
              public DbSet<User> Users { get; set; }
              public DbSet<Admin> Admins { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogDetail> BlogDetails { get; set; }
+        public DbSet<BlogReview> BlogReviews { get; set; }
+        public DbSet<ProductGallery> ProductGalleries { get; set; }
+        public DbSet<ProductHighlight> ProductHighlights { get; set; }
+        public DbSet<ProductItinerary> ProductItineraries { get; set; }
+        public DbSet<ProductPolicy> ProductPolicies { get; set; }
     }
 }

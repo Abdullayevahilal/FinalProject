@@ -97,18 +97,7 @@ namespace Repository.Repositories.ShoppingRepositories
                                      .ToList();
         }
 
-        public IEnumerable<Product> GetBlog(int limit)
-        {
-            return _context.Products.Include("Photos")
-                                  .Include("Label")
-                                  .Include("Discounts")
-                                   .Include("Discounts.Discount")
-                                  .Where(p => p.Status)
-                                  .Where(p => p.IsTopSelling)
-                                  .OrderByDescending(p => p.AddedDate)
-                                  .Take(limit)
-                                  .ToList();
-        }
+     
 
         public IEnumerable<Product> GetProductsByCategoryId(int categoryId, int take, int skip)
         {

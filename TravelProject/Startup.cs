@@ -13,6 +13,7 @@ using Repository.Data;
 using Repository.Repositories.AuthRepositories;
 using Repository.Repositories.ShoppingRepositories;
 using AutoMapper;
+using Repository.Repositories.BlogRepositories;
 
 namespace TravelProject
 {
@@ -39,7 +40,10 @@ namespace TravelProject
             services.AddTransient<IAuthRepository, AuthRepository>();
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IBlogRepository, BlogRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
            
+
 
 
         }

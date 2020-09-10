@@ -38,5 +38,10 @@ namespace Repository.Models
         public ICollection<ProductReview> Reviews { get; set; }
         public ICollection<ProductDiscount> Discounts { get; set; }
         public ICollection<Favorite> Favorites { get; set; }
+        public ICollection<ProductHighlight> ProductHighlights { get; set; }
+        public ICollection<ProductGallery> ProductGalleries { get; set; }
+        public ICollection<ProductItinerary> ProductItineraries { get; set; }
+        public ICollection<ProductPolicy> ProductPolicies { get; set; }
+
     }
 }
