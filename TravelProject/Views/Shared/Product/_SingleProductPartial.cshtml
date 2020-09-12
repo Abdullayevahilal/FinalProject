@@ -3,13 +3,14 @@
     <div class="img-category">
         <div class="side-effect"></div>
         <div>
-            <a asp-controller="products" asp-action="index" asp-route-id="@Model.Id">
-           
-                <img class="img-fluid blur-up lazyload bg-img" src="~/uploads/@Model.Photos" alt="">
-                </a>
-           
+            @*<a asp-controller="products" asp-action="index" asp-route-id="@Model.Id"></a>*@
+                @foreach (var item in Model.Photos)
+                {
+                    <img class="img-fluid blur-up lazyload bg-img" src="~/uploads/@item" alt="">
+                }
 
-            @*</a>*@
+         
+          
         </div>
         <div class="top-bar">
           

@@ -1,10 +1,14 @@
 ﻿@model ProductViewModel
 <div class="category-wrap">
     <div class="category-img">
+        @foreach (var item in Model.Photos)
+        {
         <a href="#">
-            <img src="~/images/tour/tour/4.jpg" alt=""
+            <img src="~/uploads/@item" alt="@Model.Name"
                  class="img-fluid blur-up lazyload">
         </a>
+        }
+        
         <div class="side-effect"></div>
     </div>
     <div class="category-content">

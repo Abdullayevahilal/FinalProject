@@ -29,7 +29,12 @@ namespace Travel.Mapping
             CreateMap<RegisterViewModel, User>();
             CreateMap<ProductReview, LeaveReviewViewModel>();
             CreateMap<Blog, BlogViewModel>();
-           
+            CreateMap<ProductReview, ReviewViewModel>();
+            CreateMap<BlogReview, BlogReviewViewModel>();
+            CreateMap<BlogDetail, BlogDetailViewModel>();
+            CreateMap<BlogReview, BlogDetailViewModel>();
+
+
 
         }
     }
